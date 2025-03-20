@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/user-p");
-const { authenticateToken } = require("./userAuth");
+const { authenticateToken } = require("../middleware");
 
 //put book to cart
 router.put("/add-to-cart", authenticateToken, async (req, res) => {
